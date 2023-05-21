@@ -85,7 +85,52 @@ class Vehicle {
     }
 }
 
+class Engine extends Vehicle {
+    constructor(engine, make, model, year, color, mileage){
+        this.engine = engine;
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.passenger = 0;
+        this.speed = 0;
+        this.mileage = mileage;
+        this.started = false;
+        this.numberOfWheels = 0;
+
+    }
+
+    autoDrive(){
+        super.autoDrive();
+    }
+
+    engineLight(light){
+        this.light = light;
+        if(this.light == true){
+            console.log("you need to get your car checked!!");
+
+        }
+        else{
+            console.log("you are all good in the hood. ");
+        }
+
+    }
+
+    typeOfVehicle(wheels) {
+      this.wheels = wheels; 
+      if(this.wheels == 1 && 1 == wheels){
+        console.log("You need to add air to your tires.")
+      }
+      else{
+        console.log("You are all good.")
+      }
+    }
+
+    
+}
+
 //This exports things you want to use from this "module", more info in readme
 module.exports = {
     Vehicle
+    
 }
